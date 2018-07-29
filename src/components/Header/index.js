@@ -10,6 +10,9 @@ const Header = () => {
       <div className="logo">
         <img className="logImg" src={logo}/>
       </div>
+      <div className="centerContent">
+        <p>BOTIFUL</p>
+      </div>
       <div className="rightSide">
         <p>Dashboard</p>
       </div>

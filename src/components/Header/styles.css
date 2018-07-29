@@ -1,10 +1,24 @@
 .Header {
   display: flex;
-  background-color: #5AB0AA;
+  /* background-color: #5AB0AA; */
+  background-color: transparent;
   height: 80px;
   justify-content: space-between;
   align-items: center;
   color: white;
+  font-size: 30px;
+  position: absolute;
+  width: 100vw;
+}
+
+.Header p {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.centerContent {
+  padding-left: 30px;
+  font-size: 33px;
+  letter-spacing: 33px;
 }
 
 .logImg {
@@ -14,4 +28,6 @@
 
 .rightSide {
   padding-right: 20px;
+  font-size: 15px;
+  letter-spacing: 10px;
 }

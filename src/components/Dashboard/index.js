@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import DashboardItem from '../DashboardItem';
+import UIBuilder from '../UIBuilder';
 import './styles.css';
 
 import barber from '../../assets/barber.svg'
@@ -33,16 +34,38 @@ const icons = [
   farm
 ];
 
-const Dashboard = () => {
-  return (
-    <div className="Dashboard">
-      <div className="DashboardContainer">
-        <div className="DashboardContents">
-          {smallBusinessList.map((business, idx) => { return <DashboardItem business={business} icon={icons[idx]}/>})}
+class Dashboard extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isDashboard: true,
+    }
+
+    this.toggleDashboardState = this.toggleDashboardState.bind(this);
+  }
+
+  toggleDashboardState() {
+    console.log('event')
+    this.setState({
+      isDashboard: !this.state.isDashboard,
+    })
+  }
+
+  render() {
+    return (
+      <div className="Dashboard">
+        <div className="DashboardContainer">
+          { this.state.isDashboard ?
+            <div className="DashboardContents">
+              {smallBusinessList.map((business, idx) => {
+                return <DashboardItem business={business} icon={icons[idx]} action={this.toggleDashboardState} />
+              })}
+            </div> : <UIBuilder />
+          }
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Dashboard;

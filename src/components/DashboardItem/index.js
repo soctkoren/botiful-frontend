@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.css';
 
-const DashboardItem = ({ business, icon }) => {
+const DashboardItem = ({ business, icon, action }) => {
   return (
     <div className="DashboardItem">
-      <div className="ItemName">
+      <div className="ItemName" onClick={action}>
         <p className="business">{ business }</p>
         <div className="BusinessIconContainer">
           <img className="BusinessIcon" src={icon} />

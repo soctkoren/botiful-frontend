@@ -1,0 +1,53 @@
+.boards {
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  width: 100%;
+  background-color: #65B9B3;
+  height: 5px;
+}
+
+.boardsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 0px 10px 0px 0px; */
+  /* min-height: 600px; */
+}
+
+.boardsSubHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px 20px 50px;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 8px;
+}
+.boardsSubHeader p {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.boards {
+    background-color: white;
+}
+
+.right-item {
+  color: #FF0084;
+}
+
+.saveBtn {
+  width: 100%;
+  height: 100%;
+  background-color: #FF0084;
+}
+
+.saveBtn button {
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 12px;
+  background-color: #FF0084;
+  border: none;
+}

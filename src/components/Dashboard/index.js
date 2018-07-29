@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DashboardItem from '../DashboardItem';
 import UIBuilder from '../UIBuilder';
 import './styles.css';
+import axios from 'axios';
 
 import barber from '../../assets/barber.svg'
 import cafe from '../../assets/cafe.svg'
@@ -35,19 +36,18 @@ const icons = [
 ];
 
 class Dashboard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props)
     this.state = {
-      isDashboard: true,
+      reviews: []
     }
-
-    this.toggleDashboardState = this.toggleDashboardState.bind(this);
   }
 
-  toggleDashboardState() {
-    console.log('event')
-    this.setState({
-      isDashboard: !this.state.isDashboard,
+  componentDidMount() {
+    axios.get('https://bsunter.lib.id/Botiful@dev/api/reviews/').then((res) => {
+      this.setState({
+        reviews: res.data.reviews
+      })
     })
   }
 
@@ -55,12 +55,28 @@ class Dashboard extends Component {
     return (
       <div className="Dashboard">
         <div className="DashboardContainer">
-          { this.state.isDashboard ?
+          { this.props.isDashboard ?
             <div className="DashboardContents">
               {smallBusinessList.map((business, idx) => {
-                return <DashboardItem business={business} icon={icons[idx]} action={this.toggleDashboardState} />
+                return <DashboardItem business={business} icon={icons[idx]} action={this.props.action}/>
               })}
-            </div> : <UIBuilder />
+            </div> : <div className="UIContainer"><UIBuilder showReview={this.props.showReview}/></div>
+          }
+          {
+            this.props.isReview ?
+            <div className="reviewPage">
+              <div className="reviewContainer">
+                <h3>Reviews</h3>
+                {this.state.reviews.length > 0 ? this.state.reviews.map((item) => {
+                  return (
+                    <div className="reviewCard">
+                      <span>{item.stars}★</span>
+                      <p>{item.content}</p>
+                    </div>
+                  );
+                }) : <div></div>}
+              </div>
+            </div> : <div></div>
           }
         </div>
       </div>

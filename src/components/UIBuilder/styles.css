@@ -1,0 +1,60 @@
+.ui-form {
+  width: 100%;
+}
+
+.ui-form label {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.uiInputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ui-input {
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-right: 12px;
+  color: #FF0084;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+input[type="text"]
+{
+    font-size:15px;
+}
+
+.topForm {
+  font-size: 20px;
+  letter-spacing: 8px;
+  padding: 10px;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  justify-content: space-around;
+}
+
+.UIBuilder {
+  min-height: 700px;
+}
+
+.saveBtn {
+  height: 30px;
+}
+
+.saveBtn button {
+  height: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+}

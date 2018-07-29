@@ -2,7 +2,7 @@
   height: 200px;
   width: 200px;
   /* background-color: transparent; */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   opacity: 1.0;
   margin: 20px;
   border: solid;
@@ -28,4 +28,8 @@
 .BusinessIcon {
   width: 70px;
   opacity: 0.8;
+}
+
+.DashboardItem:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }

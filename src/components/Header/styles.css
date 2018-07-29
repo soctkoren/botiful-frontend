@@ -15,6 +15,11 @@
   text-shadow: 2px 2px 4px #000000;
 }
 
+.exclaim {
+    color: #FF0084;
+    font-size: 40px;
+}
+
 .centerContent {
   padding-left: 30px;
   font-size: 33px;

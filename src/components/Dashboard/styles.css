@@ -1,0 +1,18 @@
+.Dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #E5FBF9;
+}
+
+.DashboardContents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.DashboardContainer {
+  display: flex;
+  width: 1080px;
+  background-color: #E5FBF9;
+}

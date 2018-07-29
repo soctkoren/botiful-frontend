@@ -1,0 +1,17 @@
+.Header {
+  display: flex;
+  background-color: #5AB0AA;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logImg {
+  padding-left: 20px;
+  width: 60px;
+}
+
+.rightSide {
+  padding-right: 20px;
+}

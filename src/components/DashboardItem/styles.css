@@ -1,0 +1,13 @@
+.DashboardItem {
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  margin: 20px;
+}
+
+.ItemName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
